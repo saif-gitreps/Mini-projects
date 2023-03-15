@@ -57,7 +57,7 @@ public class LoginPage extends JFrame{
                             dispose();
                         }
                         else{
-                            //admin panel.
+                            ///admin panel.
                         }
                     } else {
                         //JOptionPane.showMessageDialog(null, "Wrong password! ");

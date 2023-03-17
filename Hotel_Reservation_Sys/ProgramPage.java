@@ -74,24 +74,27 @@ public class ProgramPage extends JFrame{
                     return;
                 }
                 else {
-                    Customer people = new Customer(name, nation, members, cred, bed, dur, food, tour);
-                    customerList.add(people);
                     int value = CostCalculator(bed,dur,food,tour);
-                    JOptionPane.showMessageDialog(null,"Your total cost is : "+value);
+                    Customer people = new Customer(name, nation, members, cred, bed, dur, food, tour,value);
+                    customerList.add(people);
+                    JOptionPane.showMessageDialog(null,"Thank you for booking\nYour total cost is : "+value+"\nHope you enjoy your time!");
+                    AdminPage adminPage = new AdminPage(customerList);
+                    adminPage.setVisible(true);
                 }
             }
         });
         CLEARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NameField.setText("");
-                NatField.setText("");
-                MemField.setText("");
-                CredField.setText("");
-                BedCombo.removeAllItems();
-                StayCombo.removeAllItems();
+                NameField.setText(" ");
+                NatField.setText(" ");
+                MemField.setText(" ");
+                CredField.setText(" ");
+                BedCombo.setSelectedIndex(0);
+                StayCombo.setSelectedIndex(0);
                 foodCheckBox.setSelected(false);
                 tourGuideCheckBox.setSelected(false);
+                OutLabel.setText(" ");
             }
         });
         BACKbutton.addActionListener(new ActionListener() {
@@ -100,6 +103,13 @@ public class ProgramPage extends JFrame{
                 LoginPage login = new LoginPage();
                 login.setVisible(true);
                 dispose();
+            }
+        });
+        viewAsAdminButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdminPage adminPage = new AdminPage(customerList);
+                adminPage.setVisible(true);
             }
         });
     }

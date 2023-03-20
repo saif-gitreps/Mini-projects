@@ -10,9 +10,7 @@ public class ProgramPage extends JFrame{
     private JButton BOOKButton;
     private JButton CLEARButton;
     private JTextField NameField;
-    private JTextField NatField;
     private JTextField MemField;
-    private JTextField CredField;
     private JLabel enterLabel;
     private JComboBox BedCombo;
     private JComboBox StayCombo;
@@ -62,20 +60,18 @@ public class ProgramPage extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = NameField.getText();
-                String nation = NatField.getText();
                 String members = MemField.getText();
-                String cred = CredField.getText();
                 String bed = BedCombo.getSelectedItem().toString();
                 String dur = StayCombo.getSelectedItem().toString();
                 boolean food = foodCheckBox.isSelected();
                 boolean tour = tourGuideCheckBox.isSelected();
-                if(name==" " || nation==" " || members==" " || cred==" " || bed==" " || dur==" "){
+                if(name==" " || members==" " || bed==" " || dur==" "){
                     OutLabel.setText("Please do not keep any fields empty.");
                     return;
                 }
                 else {
                     int value = CostCalculator(bed,dur,food,tour);
-                    Customer people = new Customer(name, nation, members, cred, bed, dur, food, tour,value);
+                    Customer people = new Customer(name, members, bed, dur, food, tour,value);
                     customerList.add(people);
                     JOptionPane.showMessageDialog(null,"Thank you for booking\nYour total cost is : "+value+"\nHope you enjoy your time!");
                     AdminPage adminPage = new AdminPage(customerList);
@@ -87,9 +83,7 @@ public class ProgramPage extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 NameField.setText(" ");
-                NatField.setText(" ");
                 MemField.setText(" ");
-                CredField.setText(" ");
                 BedCombo.setSelectedIndex(0);
                 StayCombo.setSelectedIndex(0);
                 foodCheckBox.setSelected(false);

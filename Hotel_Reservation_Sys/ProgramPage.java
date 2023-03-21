@@ -19,9 +19,11 @@ public class ProgramPage extends JFrame{
     private JButton BACKbutton;
     public ArrayList<Customer> customerList = new ArrayList<Customer>();
     public int Cost;
+    public static Customer people;
+    public static int value;
 
-    int CostCalculator(String bed,String dur,boolean food, boolean tour) {
-        int cost = 0,Bed = Integer.parseInt(bed) , Dur = Integer.parseInt(dur);
+    int CostCalculator(int bed,String dur,boolean food, boolean tour) {
+        int cost = 0,Bed = bed , Dur = Integer.parseInt(dur);
         if (!food && !tour) {
             cost = (Bed * 200) + (1000 * Dur);
         }
@@ -50,10 +52,9 @@ public class ProgramPage extends JFrame{
         StayCombo.addItem("5");
         StayCombo.addItem("9");
 
-
         setContentPane(getProgramPanel());
         setTitle("LOGIN PAGE");
-        setSize(600,500);
+        setSize(600,450);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         BOOKButton.addActionListener(new ActionListener() {
@@ -61,34 +62,36 @@ public class ProgramPage extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String name = NameField.getText();
                 String members = MemField.getText();
-                String bed = BedCombo.getSelectedItem().toString();
+                int Members = Integer.parseInt(members);
+                String bedString = BedCombo.getSelectedItem().toString();
+                int bed = Integer.parseInt(bedString);
                 String dur = StayCombo.getSelectedItem().toString();
                 boolean food = foodCheckBox.isSelected();
                 boolean tour = tourGuideCheckBox.isSelected();
-                if(name==" " || members==" " || bed==" " || dur==" "){
+                if(name==" " || members==" " || dur==" "){
                     OutLabel.setText("Please do not keep any fields empty.");
                     return;
                 }
                 else {
-                    int value = CostCalculator(bed,dur,food,tour);
-                    Customer people = new Customer(name, members, bed, dur, food, tour,value);
-                    customerList.add(people);
-                    JOptionPane.showMessageDialog(null,"Thank you for booking\nYour total cost is : "+value+"\nHope you enjoy your time!");
-                    AdminPage adminPage = new AdminPage(customerList);
-                    adminPage.setVisible(true);
+                    value = CostCalculator(bed,dur,food,tour);
+                    people = new Customer (Members, bed,value-((value*2)/100));
+                    JOptionPane.showMessageDialog(null,"Thank you "+name+" for booking\nYour total cost is : "+value+"\nHope you enjoy your time!");
+                    NameField.setText("");
+                    MemField.setText("");
+                    BedCombo.setSelectedIndex(0);
+                    StayCombo.setSelectedIndex(0);
+                    OutLabel.setText("");
                 }
             }
         });
         CLEARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NameField.setText(" ");
-                MemField.setText(" ");
+                NameField.setText("");
+                MemField.setText("");
                 BedCombo.setSelectedIndex(0);
                 StayCombo.setSelectedIndex(0);
-                foodCheckBox.setSelected(false);
-                tourGuideCheckBox.setSelected(false);
-                OutLabel.setText(" ");
+                OutLabel.setText("");
             }
         });
         BACKbutton.addActionListener(new ActionListener() {
@@ -102,8 +105,9 @@ public class ProgramPage extends JFrame{
         viewAsAdminButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AdminPage adminPage = new AdminPage(customerList);
+                AdminPage adminPage = new AdminPage(people);
                 adminPage.setVisible(true);
+                dispose();
             }
         });
     }

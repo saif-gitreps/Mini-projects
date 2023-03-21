@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.lang.String;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class LoginPage extends JFrame{
@@ -56,10 +55,14 @@ public class LoginPage extends JFrame{
                             NewPanel.setVisible(true);
                             dispose();
                         }
-                        else{
-                            ///admin panel.
+                        else if(myCombo.getSelectedItem()=="Admin"){
+                            Customer people = new Customer(Customer.totalMembers,Customer.bedOccupied,Customer.bedOccupied);
+                            AdminPage adminPage = new AdminPage(people);
+                            adminPage.setVisible(true);
+                            dispose();
                         }
-                    } else {
+                    }
+                    else {
                         //JOptionPane.showMessageDialog(null, "Wrong password! ");
                         OutPutLabel.setText("Wrong Password! ");
                     }

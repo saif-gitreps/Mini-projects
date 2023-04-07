@@ -2140,6 +2140,103 @@ void quicksort(int a[],int L,int R){
 
 int GCD(int a,int b){return b==0?a:GCD(b,a%b);}
 int LCM(int a,int b){return (a*b)/GCD(a,b);}
+
+
+ll LCM(ll a,ll b){
+   return (a*b)/__gcd(a,b);
+}
+
+vector<int> seevey_boy(int n){ 
+   vector<int> a;
+   vector<bool> is_prime(n+1, true);
+   is_prime[0] = is_prime[1] = false;
+   for (int i = 2; i <= n; i++) {
+      if (is_prime[i] && (long long)i*i <= n) {
+         for (int j = i*i; j <= n; j += i){
+            is_prime[j] = false; } 
+         } 
+      }
+   for(int i=2;i<=n;i++){if(is_prime[i]){
+         a.pb(i);
+      }
+   }   
+   return a;
+}
+
+int pow_large(int a,int b){
+   int res = 1;
+   while(b>0){
+      if(b%2==1){
+         res *= a;
+      }
+      a *= a;
+      b /= 2;
+   }
+   return res;
+}
+vector<int> find_factors(int n){
+   vector<int> f;
+   for(int x=2;x*x<=n;x++){
+      while(n%x==0){
+         f.push_back(x);
+         n /= x;}
+      }
+      if(n>1){
+         f.push_back(n);
+      }
+   return f; 
+}
+
+int co_prime_to_the_number(int n) {
+    int result = n; // Initialize result as n
+
+    // Consider all prime factors of n and subtract their multiples from result
+    for (int p = 2; p * p <= n; p++) {
+        // If p is a prime factor of n, then update result
+        if (n % p == 0) {
+            while (n % p == 0)
+                n /= p;
+            result -= result / p;
+        }
+    }
+    if (n > 1)
+        result -= result / n;
+
+    return result;
+}
+
+bool isugly(int n){
+        if(n==1){
+            return true;
+        }
+        if(n==0){
+            return false;
+        }
+        if(n%2==0) {return isugly(n/2);}
+        if(n%3==0) {return isugly(n/3);}
+        if(n%5==0) {return isugly(n/5);}
+        return false;
+    }
+
+int nthUglyNumber(int n) {
+        int p1=2,p2=3,p3=5;
+        int nth;
+        for(int i=1;i<=n;i++){
+            nth = min({p1,p2,p3});
+            p1+=2; p2+=3; p3+=5; 
+            //nth = min({p1,p2,p3}); 
+        }
+        return nth;
+    } 
+
+void fisherYatesShuffle(vector<int>& nums) {
+    int n = nums.size();
+    for (int i = n-1; i >= 1; --i) {
+        int j = rand() % (i+1);
+        
+        swap(nums[i], nums[j]);
+    }
+}
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: MAIN ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
 main(){
     int x = 4;

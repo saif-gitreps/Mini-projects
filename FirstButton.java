@@ -5,7 +5,7 @@ public class ClassDisplay {
        JFrame frame = new JFrame("simple button");
        JButton button = new JButton("click me");
        button.setSize(200,400);
-       frame.setSize(500,400);
+       frame.setSize(100,400);
        frame.setBackground(Color.cyan);
        frame.getContentPane().add(button);
        frame.setVisible(true);

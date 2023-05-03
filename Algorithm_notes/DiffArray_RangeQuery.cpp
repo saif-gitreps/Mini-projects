@@ -1,6 +1,6 @@
 /*
   lets say we have M number of queries. and each queury has
-  L and R range. and an updation of any sort.
+  L and R range. and an updation of any sort..
   this works in O(n^2)
 */
 class Example{

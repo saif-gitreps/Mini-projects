@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(185, 203, 197);
+/*   background-color: rgb(185, 203, 197); */
+  background-color: red;
   text-align: center;
   font-family: "Roboto", sans-serif;
   margin: 35px;

@@ -23,7 +23,7 @@ h1 {
   color: rgb(60, 55, 93);
   font-size: 38px;
 }
-main {
+main div {
   background-color: rgb(204, 204, 204);
   border: 3px solid rgb(49, 94, 94);
   color: rgb(20, 64, 79);
@@ -34,8 +34,6 @@ main {
   text-align: center;
   font-family: "Firo san", sans-serif;
   font-size: 20px;
-  display: flex;
-  flex-direction: column;
 }
 main p {
   text-align: left;

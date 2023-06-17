@@ -75,10 +75,6 @@ header a {
 main {
   background: linear-gradient(120deg, rgb(8, 25, 49), black);
 }
-main div {
-  padding: 30px 20px 10px 20px;
-  font-family: "Noto Sans", sans-serif;
-}
 main h1 {
   font-family: "Dancing Script", cursive;
   text-align: center;
@@ -86,13 +82,16 @@ main h1 {
 }
 main h3 {
   font-family: "Pacifico", cursive;
-  text-decoration: underline;
 }
 main a {
   color: rgb(205, 45, 45);
   font-weight: bold;
   padding: 3px;
   border-radius: 5px;
+}
+main div {
+  padding: 30px 20px 10px 20px;
+  font-family: "Noto Sans", sans-serif;
 }
 main a:hover {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
@@ -112,7 +111,7 @@ main a:hover {
   align-items: center;
 }
 main img {
-  height: 310px;
+  height: 305px;
   width: 450px;
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgb(81, 81, 81);
@@ -127,7 +126,7 @@ footer ul {
   margin: 0;
 }
 footer ul li {
-  margin: 20px 60px;
+  margin: 20px 30px;
 }
 footer img {
   height: 30px;

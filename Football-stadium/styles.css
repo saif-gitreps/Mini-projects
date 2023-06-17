@@ -97,6 +97,10 @@ main a:hover {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   color: aliceblue;
 }
+.inner-card {
+  width: 200px;
+  flex-basis: 600px;
+}
 #man-vs-chelsea {
   display: flex;
   align-items: center;

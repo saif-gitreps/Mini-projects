@@ -42,16 +42,36 @@ header a {
   background-size: cover;
 }
 #UCL-ground div {
+  background-color: rgba(5, 58, 88, 0.5);
+  box-shadow: 2px 2px 30px black;
   display: flex;
   flex-direction: column;
-  background-color: rgb(10, 21, 67, 0.5);
-  width: 500px;
+  position: relative;
+  top: 40%;
+  width: 660px;
+  height: 230px;
   margin: 0 auto;
-  height: 200px;
+  border-radius: 16px;
   text-align: center;
   justify-content: center;
-  border-radius: 16px;
 }
+#UCL-ground div h3 {
+  font-family: "Firo sans", serif;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+#UCL-ground div a {
+  font-family: "Dancing Script", cursive;
+  color: rgb(221, 236, 255);
+  font-size: 30px;
+  width: 160px;
+  margin: 0 auto;
+}
+#UCL-ground div a:hover {
+  color: brown;
+  text-shadow: 1px 1px 2px rgb(26, 26, 26);
+}
+
 main {
   background: linear-gradient(120deg, rgb(8, 25, 49), black);
 }

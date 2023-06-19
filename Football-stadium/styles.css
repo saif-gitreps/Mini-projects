@@ -2,9 +2,9 @@
   color: rgb(189, 189, 238);
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   text-transform: uppercase;
-  font-size: 40px;
-  margin: 0 20px;
-  padding: 8px;
+  font-size: 2.3rem;
+  margin: 0 1.2rem;
+  padding: 0.5rem;
   border-radius: 13px;
 }
 #champions:hover {
@@ -18,16 +18,15 @@ header {
   width: 100%;
 }
 header ul {
-  margin: 10px;
+  margin: 0.7rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 header ul li {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
-  padding: 12px;
-  margin: 0 15px;
-  border-radius: 10px;
+  padding: 0.9rem;
+  margin: 0 1rem;
 }
 header li:hover {
   text-shadow: 1px 2px 5px rgb(15, 12, 12);
@@ -37,7 +36,7 @@ header a {
 }
 #UCL-ground {
   background-image: url("/Football-stadium/pics/ucl.jpg");
-  height: 900px;
+  height: 56rem;
   background-position: center;
   background-size: cover;
 }
@@ -48,8 +47,8 @@ header a {
   flex-direction: column;
   position: relative;
   top: 40%;
-  width: 660px;
-  height: 230px;
+  width: 41rem;
+  height: 17rem;
   margin: 0 auto;
   border-radius: 16px;
   text-align: center;
@@ -58,13 +57,13 @@ header a {
 #UCL-ground div h3 {
   font-family: "Firo sans", serif;
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 #UCL-ground div a {
   font-family: "Dancing Script", cursive;
   color: rgb(221, 236, 255);
-  font-size: 30px;
-  width: 160px;
+  font-size: 2.2rem;
+  width: 10rem;
   margin: 0 auto;
 }
 #UCL-ground div a:hover {
@@ -89,30 +88,20 @@ main a {
   padding: 3px;
   border-radius: 5px;
 }
-main div {
-  padding: 30px 20px 10px 20px;
+main ul {
+  padding: 2rem 1.5rem 0.6rem 1.3rem;
+  margin: 0 1rem;
   font-family: "Noto Sans", sans-serif;
+}
+main ul li {
+  display: flex;
+}
+.inner-card {
+  width: 200px;
 }
 main a:hover {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   color: aliceblue;
-}
-.inner-card {
-  width: 200px;
-  flex-basis: 600px;
-}
-#man-vs-chelsea {
-  display: flex;
-  align-items: center;
-}
-#man-vs-bayern {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-#Madrid-derby {
-  display: flex;
-  align-items: center;
 }
 main img {
   height: 305px;
@@ -133,5 +122,5 @@ footer ul li {
   margin: 20px 30px;
 }
 footer img {
-  height: 30px;
+  height: 1.7rem;
 }

@@ -90,24 +90,33 @@ main a {
 }
 main ul {
   padding: 2rem 1.5rem 0.6rem 1.3rem;
-  margin: 0 1rem;
+  width: 60rem;
+  margin: 0 auto;
   font-family: "Noto Sans", sans-serif;
 }
 main ul li {
+  margin: 1.5rem;
   display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 8px rgb(41, 38, 38);
+  border-radius: 15px;
+  overflow: hidden;
+}
+#man-vs-bayern {
+  flex-direction: row-reverse;
 }
 .inner-card {
-  width: 200px;
+  padding: 1.2rem;
 }
 main a:hover {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   color: aliceblue;
 }
 main img {
-  height: 305px;
-  width: 450px;
-  border-radius: 10px;
+  height: 17rem;
+  width: 25rem;
   box-shadow: 1px 1px 10px rgb(81, 81, 81);
+  border-radius: 10px;
 }
 footer {
   background-color: rgb(0, 0, 0);
@@ -119,7 +128,7 @@ footer ul {
   margin: 0;
 }
 footer ul li {
-  margin: 20px 30px;
+  margin: 1.3rem 2rem;
 }
 footer img {
   height: 1.7rem;

@@ -133,3 +133,17 @@ footer ul li {
 footer img {
   height: 1.7rem;
 }
+
+@media (max-width: 46rem) {
+  header {
+    text-align: center;
+    justify-content: center;
+  }
+  #champions {
+    font-size: 3.4rem;
+    margin-top: 1rem;
+  }
+  header ul {
+    display: none;
+  }
+}

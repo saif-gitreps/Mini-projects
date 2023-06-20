@@ -134,7 +134,7 @@ footer img {
   height: 1.7rem;
 }
 
-@media (max-width: 46rem) {
+@media (max-width: 48rem) {
   header {
     text-align: center;
     justify-content: center;

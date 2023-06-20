@@ -35,7 +35,7 @@ header a {
   color: rgb(189, 189, 238);
 }
 #UCL-ground {
-  background-image: url("/Football-stadium/pics/ucl.jpg");
+  background-image: url("/pics/ucl.jpg");
   height: 56rem;
   background-position: center;
   background-size: cover;

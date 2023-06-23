@@ -3,7 +3,7 @@
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 2.3rem;
-  margin: 0 1.2rem;
+  margin-left: 0.5rem;
   padding: 0.5rem;
   border-radius: 13px;
 }
@@ -26,13 +26,53 @@ header ul {
 header ul li {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   padding: 0.9rem;
-  margin: 0 1rem;
 }
 header li:hover {
   text-shadow: 1px 2px 5px rgb(15, 12, 12);
 }
 header a {
   color: rgb(189, 189, 238);
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  font-size: 3rem;
+  display: none;
+  font-weight: bolder;
+}
+.arrow p {
+  margin: 0;
+}
+#drawer {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(120deg, rgb(8, 25, 49), black);
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+#drawer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+  padding: 5rem;
+  color: aliceblue;
+  font-size: 2rem;
+}
+#drawer ul a {
+  color: aliceblue;
+}
+#drawer:target {
+  display: block;
+}
+#drawer header {
+  justify-content: right;
+}
+#drawer .arrow {
+  transform: scaleX(-1);
 }
 #UCL-ground {
   background-image: url("/Football-stadium/pics/ucl.jpg");
@@ -135,16 +175,15 @@ footer img {
 }
 
 @media (max-width: 46rem) {
-  header {
-    text-align: center;
-    justify-content: center;
-  }
   #champions {
     font-size: 3.4rem;
-    margin-top: 1rem;
+    margin: 1rem;
   }
   header ul {
     display: none;
+  }
+  .arrow {
+    display: flex;
   }
   #UCL-ground {
     height: 45rem;

@@ -74,13 +74,13 @@ header a {
 #drawer .arrow {
   transform: scaleX(-1);
 }
-#UCL-ground {
+.UCL-ground {
   background-image: url("/Football-stadium/pics/ucl.jpg");
   height: 56rem;
   background-position: center;
   background-size: cover;
 }
-#UCL-ground div {
+.UCL-ground div {
   background-color: rgba(5, 58, 88, 0.5);
   box-shadow: 2px 2px 30px black;
   display: flex;
@@ -94,19 +94,22 @@ header a {
   text-align: center;
   justify-content: center;
 }
-#UCL-ground div h3 {
+#drawer .UCL-ground div {
+  display: none;
+}
+.UCL-ground div h3 {
   font-family: "Firo sans", serif;
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
-#UCL-ground div a {
+.UCL-ground div a {
   font-family: "Dancing Script", cursive;
   color: rgb(221, 236, 255);
   font-size: 2.2rem;
   width: 10rem;
   margin: 0 auto;
 }
-#UCL-ground div a:hover {
+.UCL-ground div a:hover {
   color: brown;
   text-shadow: 1px 1px 2px rgb(26, 26, 26);
 }
@@ -175,32 +178,32 @@ footer img {
 }
 
 @media (max-width: 46rem) {
-  #champions {
+  /* #champions {
     font-size: 3.4rem;
     margin: 1rem;
-  }
+  } */
   header ul {
     display: none;
   }
   .arrow {
     display: flex;
   }
-  #UCL-ground {
+  .UCL-ground {
     height: 45rem;
   }
-  #UCL-ground div {
+  .UCL-ground div {
     position: relative;
     top: 40%;
     width: 20rem;
     height: 14rem;
     border-radius: 16px;
   }
-  #UCL-ground div h3 {
+  .UCL-ground div h3 {
     font-family: "Firo sans", serif;
     margin-bottom: 20px;
     font-size: 2rem;
   }
-  #UCL-ground div a {
+  .UCL-ground div a {
     font-family: "Dancing Script", cursive;
     color: rgb(221, 236, 255);
     font-size: 1.7rem;

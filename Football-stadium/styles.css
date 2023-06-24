@@ -74,6 +74,11 @@ header a {
 #drawer .arrow {
   transform: scaleX(-1);
 }
+
+#drawer:target - .UCL-ground {
+  display: none;
+}
+
 .UCL-ground {
   background-image: url("/Football-stadium/pics/ucl.jpg");
   height: 56rem;
@@ -93,9 +98,6 @@ header a {
   border-radius: 16px;
   text-align: center;
   justify-content: center;
-}
-#drawer .UCL-ground div {
-  display: none;
 }
 .UCL-ground div h3 {
   font-family: "Firo sans", serif;
@@ -178,10 +180,6 @@ footer img {
 }
 
 @media (max-width: 46rem) {
-  /* #champions {
-    font-size: 3.4rem;
-    margin: 1rem;
-  } */
   header ul {
     display: none;
   }

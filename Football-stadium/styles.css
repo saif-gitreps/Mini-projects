@@ -3,7 +3,7 @@
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 2.3rem;
-  margin: 0 1.2rem;
+  margin-left: 0.5rem;
   padding: 0.5rem;
   border-radius: 13px;
 }
@@ -26,7 +26,6 @@ header ul {
 header ul li {
   text-shadow: 1px 1px 6px rgb(255, 255, 255);
   padding: 0.9rem;
-  margin: 0 1rem;
 }
 header li:hover {
   text-shadow: 1px 2px 5px rgb(15, 12, 12);
@@ -34,13 +33,64 @@ header li:hover {
 header a {
   color: rgb(189, 189, 238);
 }
+<<<<<<< HEAD
 #UCL-ground {
   background-image: url("/pics/ucl.jpg");
+=======
+.arrow {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  font-size: 3rem;
+  display: none;
+  font-weight: bolder;
+}
+.arrow p {
+  margin: 0;
+}
+#drawer {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(120deg, rgb(8, 25, 49), black);
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+#drawer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+  padding: 5rem;
+  color: aliceblue;
+  font-size: 2rem;
+}
+#drawer ul a {
+  color: aliceblue;
+}
+#drawer:target {
+  display: block;
+}
+#drawer header {
+  justify-content: right;
+}
+#drawer .arrow {
+  transform: scaleX(-1);
+}
+
+#drawer:target - .UCL-ground {
+  display: none;
+}
+
+.UCL-ground {
+  background-image: url("/Football-stadium/pics/ucl.jpg");
+>>>>>>> testing
   height: 56rem;
   background-position: center;
   background-size: cover;
 }
-#UCL-ground div {
+.UCL-ground div {
   background-color: rgba(5, 58, 88, 0.5);
   box-shadow: 2px 2px 30px black;
   display: flex;
@@ -54,19 +104,19 @@ header a {
   text-align: center;
   justify-content: center;
 }
-#UCL-ground div h3 {
+.UCL-ground div h3 {
   font-family: "Firo sans", serif;
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
-#UCL-ground div a {
+.UCL-ground div a {
   font-family: "Dancing Script", cursive;
   color: rgb(221, 236, 255);
   font-size: 2.2rem;
   width: 10rem;
   margin: 0 auto;
 }
-#UCL-ground div a:hover {
+.UCL-ground div a:hover {
   color: brown;
   text-shadow: 1px 1px 2px rgb(26, 26, 26);
 }
@@ -134,6 +184,7 @@ footer img {
   height: 1.7rem;
 }
 
+<<<<<<< HEAD
 @media (max-width: 48rem) {
   header {
     text-align: center;
@@ -143,25 +194,31 @@ footer img {
     font-size: 3.4rem;
     margin-top: 1rem;
   }
+=======
+@media (max-width: 46rem) {
+>>>>>>> testing
   header ul {
     display: none;
   }
-  #UCL-ground {
+  .arrow {
+    display: flex;
+  }
+  .UCL-ground {
     height: 45rem;
   }
-  #UCL-ground div {
+  .UCL-ground div {
     position: relative;
     top: 40%;
     width: 21rem;
     height: 14rem;
     border-radius: 16px;
   }
-  #UCL-ground div h3 {
+  .UCL-ground div h3 {
     font-family: "Firo sans", serif;
     margin-bottom: 20px;
     font-size: 2rem;
   }
-  #UCL-ground div a {
+  .UCL-ground div a {
     font-family: "Dancing Script", cursive;
     color: rgb(221, 236, 255);
     font-size: 1.7rem;

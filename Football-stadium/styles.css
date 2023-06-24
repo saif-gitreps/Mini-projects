@@ -33,59 +33,8 @@ header li:hover {
 header a {
   color: rgb(189, 189, 238);
 }
-<<<<<<< HEAD
 #UCL-ground {
   background-image: url("/pics/ucl.jpg");
-=======
-.arrow {
-  display: flex;
-  align-items: center;
-  margin: 0 2rem;
-  font-size: 3rem;
-  display: none;
-  font-weight: bolder;
-}
-.arrow p {
-  margin: 0;
-}
-#drawer {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background: linear-gradient(120deg, rgb(8, 25, 49), black);
-  display: flex;
-  justify-content: center;
-  display: none;
-}
-#drawer ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5rem;
-  padding: 5rem;
-  color: aliceblue;
-  font-size: 2rem;
-}
-#drawer ul a {
-  color: aliceblue;
-}
-#drawer:target {
-  display: block;
-}
-#drawer header {
-  justify-content: right;
-}
-#drawer .arrow {
-  transform: scaleX(-1);
-}
-
-#drawer:target - .UCL-ground {
-  display: none;
-}
-
-.UCL-ground {
-  background-image: url("/Football-stadium/pics/ucl.jpg");
->>>>>>> testing
   height: 56rem;
   background-position: center;
   background-size: cover;
@@ -184,7 +133,6 @@ footer img {
   height: 1.7rem;
 }
 
-<<<<<<< HEAD
 @media (max-width: 48rem) {
   header {
     text-align: center;
@@ -194,9 +142,6 @@ footer img {
     font-size: 3.4rem;
     margin-top: 1rem;
   }
-=======
-@media (max-width: 46rem) {
->>>>>>> testing
   header ul {
     display: none;
   }
@@ -270,7 +215,7 @@ footer img {
     margin: 2rem 1.5rem;
   }
   footer img {
-    height: 1.9rem;
+    height: 1.7rem;
   }
   li:nth-of-type(4) {
     display: none;

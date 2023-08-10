@@ -27,7 +27,7 @@ input {
 }
 #button-body {
    font-size: 1.3rem;
-   font-weight: bolder;
+   font-weight: 500;
    display: grid;
    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
    list-style: none;
@@ -41,6 +41,7 @@ input {
    box-shadow: 2px 2px 4px rgb(216, 215, 215);
    margin: 0;
    padding: 0.6rem;
+   border-radius: 3px;
 }
 .operator {
    background-color: rgb(156, 212, 235);
@@ -51,5 +52,24 @@ input {
 }
 #AC-button {
    background-color: rgb(101, 34, 34);
+   border-radius: 0;
    color: white;
+}
+
+.number:hover {
+   cursor: pointer;
+   background-color: rgb(220, 217, 217);
+}
+
+.operator:hover {
+   background-color: rgb(120, 170, 189);
+   cursor: pointer;
+}
+#AC-button:hover {
+   background-color: rgb(179, 67, 67);
+   cursor: pointer;
+}
+#equal-sign:hover {
+   cursor: pointer;
+   background-color: rgb(84, 170, 84);
 }

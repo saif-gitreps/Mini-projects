@@ -42,6 +42,7 @@ input {
    margin: 0;
    padding: 0.6rem;
    border-radius: 3px;
+   transition: background-color 0.3s ease-out;
 }
 .operator {
    background-color: rgb(156, 212, 235);

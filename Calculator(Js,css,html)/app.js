@@ -1,7 +1,9 @@
 //buttons
 const ACbutton = document.getElementById("AC-button");
-const EqualButton = document.getElementById("equal-button");
+const equalButton = document.getElementById("equal-sign");
 const inputField = document.querySelector("input");
+const buttonBody = document.getElementById("button-body");
+let displayExpression = "";
 
 //creation of stack
 class Stack {
@@ -23,6 +25,28 @@ class Stack {
    }
 }
 //arithmetic functions
+function isValid(s) {
+   let stacc = new Stack();
+   for (let i = 0; i < s.length; i++) {
+      if (s[i] != "(" || s[i] != ")") {
+         continue;
+      }
+      if (s[i] == "(") {
+         stacc.push(s[i]);
+      } else {
+         if (!stacc.empty()) {
+            if (s[i] == ")" && stacc.top() == "(") {
+               stacc.pop();
+            } else {
+               return false;
+            }
+         } else {
+            return false;
+         }
+      }
+   }
+   return stacc.empty() ? true : false;
+}
 function result(op, a, b) {
    switch (op) {
       case "+":
@@ -33,12 +57,14 @@ function result(op, a, b) {
          return a / b;
       case "*":
          return a * b;
+      case "^":
+         return Math.pow(a, b);
       default:
          return -404;
    }
 }
 function isOp(a) {
-   if (a == "+" || a == "/" || a == "-" || a == "*") {
+   if (a == "+" || a == "/" || a == "-" || a == "*" || a == "^") {
       return 1;
    }
    return 0;
@@ -115,17 +141,10 @@ function PostfixEvaluate(eq) {
       }
       if (isNum(eq[i])) {
          let num = 0;
-         while (i < eq.size() && isNum(eq[i])) {
-            //checking for digits more than ones
-            //we dont have to worry about next operand
-            //cuz it is separated by ' ' || ','
+         while (i < eq.length && isNum(eq[i])) {
             num = num * 10 + (eq[i] - 48);
             i++;
          }
-         //the while loop becomes false only if there
-         //exists empty spaces or operator.
-         //if we dont decrement by 1, the operator
-         //Or empty spaces will be ingored.
          i--;
          a.push(num);
       } else if (isOp(eq[i])) {
@@ -142,7 +161,31 @@ function PostfixEvaluate(eq) {
 //callback-functions
 function clearInput(event) {
    inputField.value = "";
+   displayExpression = "";
+}
+function grabDisplayExpression(event) {
+   if (event.target.tagName !== "LI" || event.target.dataset.a == "AC" || event.target.dataset.a == "=") {
+      return;
+   }
+   let buttonPressed = event.target.dataset.a;
+   displayExpression += buttonPressed;
+   inputField.value = displayExpression;
+}
+function findAns(event) {
+   if (displayExpression.length > 1 && displayExpression[0] == "0") {
+      inputField.value = "Invalid expression";
+      return;
+   }
+   console.log(displayExpression);
+   if (isValid(displayExpression) == false) {
+      console.log(isValid(displayExpression));
+      console.log(displayExpression);
+      inputField.value = "Invalid expression";
+      return;
+   }
 }
 
 //event listeners;
 ACbutton.addEventListener("click", clearInput);
+buttonBody.addEventListener("click", grabDisplayExpression);
+equalButton.addEventListener("click", findAns);

@@ -28,12 +28,9 @@ class Stack {
 function isValid(s) {
    let stacc = new Stack();
    for (let i = 0; i < s.length; i++) {
-      if (s[i] != "(" || s[i] != ")") {
-         continue;
-      }
       if (s[i] == "(") {
          stacc.push(s[i]);
-      } else {
+      } else if (s[i] == ")") {
          if (!stacc.empty()) {
             if (s[i] == ")" && stacc.top() == "(") {
                stacc.pop();
@@ -177,7 +174,7 @@ function findAns(event) {
       return;
    }
    console.log(displayExpression);
-   if (isValid(displayExpression) == false) {
+   if (!isValid(displayExpression)) {
       console.log(isValid(displayExpression));
       console.log(displayExpression);
       inputField.value = "Invalid expression";

@@ -71,16 +71,9 @@ function isNum(a) {
    if (a >= "0" && a <= "9") {
       return 1;
    }
-   if (a >= "A" && a <= "Z") {
-      return 1;
-   }
-   if (a >= "a" && a <= "z") {
-      return 1;
-   }
    return 0;
 }
 function precedent(a) {
-   let prec;
    if (a == "-" || a == "+") {
       return 1;
    }
@@ -90,7 +83,7 @@ function precedent(a) {
    if (a == "^") {
       return 3;
    }
-   return prec;
+   return 10;
 }
 
 function infixToPost(exp) {
@@ -101,7 +94,7 @@ function infixToPost(exp) {
          continue;
       }
       if (isNum(exp[i])) {
-         while (isNum(exp[i]) && i < exp.size()) {
+         while (isNum(exp[i]) && i < exp.length) {
             all = all + exp[i];
             i++;
          }
@@ -139,7 +132,7 @@ function PostfixEvaluate(eq) {
       if (isNum(eq[i])) {
          let num = 0;
          while (i < eq.length && isNum(eq[i])) {
-            num = num * 10 + (eq[i] - 48);
+            num = num * 10 + parseInt(eq[i]);
             i++;
          }
          i--;
@@ -149,7 +142,7 @@ function PostfixEvaluate(eq) {
          a.pop();
          op1 = a.top();
          a.pop();
-         res = result(eq[i], op1, op2);
+         res = result(eq[i], parseInt(op1), parseInt(op2));
          a.push(res);
       }
    }
@@ -175,11 +168,14 @@ function findAns(event) {
    }
    console.log(displayExpression);
    if (!isValid(displayExpression)) {
-      console.log(isValid(displayExpression));
-      console.log(displayExpression);
       inputField.value = "Invalid expression";
       return;
    }
+   let conversionToPostFix = infixToPost(displayExpression);
+   console.log(conversionToPostFix);
+   let finalAns = PostfixEvaluate(conversionToPostFix);
+   console.log(finalAns);
+   inputField.value = finalAns;
 }
 
 //event listeners;

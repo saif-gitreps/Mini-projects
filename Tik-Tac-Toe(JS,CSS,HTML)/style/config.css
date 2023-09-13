@@ -18,19 +18,19 @@
    padding: 1rem;
    width: 90%;
    border-radius: 5px;
-   background-color: rgb(243, 227, 255);
+   /* background-color: rgb(243, 227, 255); */
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    align-items: center;
    transition: background-color 0.3s ease-out;
 }
 #opponent-selection ul li:hover {
-   background-color: rgb(229, 208, 243);
+   background-color: rgb(245, 221, 187);
    cursor: pointer;
 }
 
 #opponent-selection h1 {
    font-size: 1.5rem;
-   color: rgb(94, 4, 168);
+   color: rgb(212, 116, 14);
    padding: 1.5rem;
 }
 
@@ -63,26 +63,26 @@
    margin: 1rem;
    padding: 1rem;
    width: 50%;
-   background-color: rgb(243, 227, 255);
+   /* background-color: rgb(243, 227, 255); */
    border-radius: 5px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #CPU-configuration ul li:hover {
-   background-color: rgb(229, 208, 243);
+   background-color: rgb(245, 221, 187);
    cursor: pointer;
 }
 
 #CPU-configuration ul li h1 {
    font-size: 2.5rem;
-   color: rgb(94, 4, 168);
+   color: rgb(212, 116, 14);
 }
 #CPU-configuration li.markedCPU {
-   background-color: rgb(75, 40, 75);
+   background-color: rgb(255, 161, 28);
    color: white;
 }
 #CPU-configuration li.markedCPU:hover {
-   background-color: rgb(75, 40, 75);
+   background-color: rgb(255, 161, 28);
    cursor: default;
 }
 
@@ -107,7 +107,7 @@
    margin: 1rem;
    padding: 1rem;
    width: 50%;
-   background-color: rgb(243, 227, 255);
+   /* background-color: rgb(243, 227, 255); */
    border-radius: 5px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -118,7 +118,7 @@
 #game-configuration ol li h3 {
    font-size: 1.5rem;
    margin: 0.5rem 0;
-   color: rgb(94, 4, 168);
+   color: rgb(212, 116, 14);
 }
 .player-symbol {
    font-size: 2rem;

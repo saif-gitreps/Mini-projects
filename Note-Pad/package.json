@@ -1,0 +1,16 @@
+{
+  "name": "note-pad",
+  "version": "1.0.0",
+  "description": "creating a server side project to store data in a .json file ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Saif Rahman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}

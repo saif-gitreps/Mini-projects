@@ -1,0 +1,21 @@
+body {
+   font-family: "Poppins", sans-serif;
+   background-color: rgb(250, 183, 159);
+   margin: 0;
+   padding: 0;
+}
+li {
+   list-style: none;
+}
+nav {
+   border: 0.5px solid black;
+}
+nav ul {
+   display: flex;
+   justify-content: right;
+   width: 95%;
+}
+
+nav ul li {
+   margin: 0 1rem;
+}

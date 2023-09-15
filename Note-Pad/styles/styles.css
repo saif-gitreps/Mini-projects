@@ -15,7 +15,27 @@ nav ul {
    justify-content: right;
    width: 95%;
 }
-
 nav ul li {
    margin: 0 1rem;
+}
+#adding-note {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   width: 80%;
+   margin: 0 auto 0;
+   border: 1px solid black;
+}
+#adding-note form {
+   width: 30rem;
+   border: 1px solid black;
+}
+#adding-title {
+   display: flex;
+   height: 3.5rem;
+   width: 100%;
+}
+#adding-textarea {
+   height: 10rem;
+   width: 100%;
 }

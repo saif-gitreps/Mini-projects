@@ -29,32 +29,30 @@
          </nav>
       </header>
       <main>
-         <section id="adding-note">
-            <article>
-               <form action="">
-                  <input type="text" placeholder="title" id="adding-title" />
-                  <textarea
-                     name=""
-                     id="adding-textarea"
-                     cols="50"
-                     rows="6"
-                     placeholder="description"
-                  ></textarea>
-               </form>
-               <h2 id="add-button">+ add</h2>
-            </article>
-         </section>
+         <article id="adding-note">
+            <form action="">
+               <input type="text" placeholder="title" id="adding-title" />
+               <textarea
+                  name=""
+                  id="adding-textarea"
+                  cols="100"
+                  rows="7"
+                  placeholder="description"
+               ></textarea>
+            </form>
+            <h2 id="add-button">+ add</h2>
+         </article>
          <section id="display-note">
             <ul>
-               <form action="">
-                  <li>
-                     <input type="checkbox" />
-                     <article>
-                        <h2>---</h2>
-                        <h3>------</h3>
-                     </article>
-                  </li>
-               </form>
+               <li>
+                  <form action="">
+                     <input type="checkbox" id="display-checkbox" />
+                  </form>
+                  <article id="display-card">
+                     <h2>---</h2>
+                     <h3>------</h3>
+                  </article>
+               </li>
             </ul>
          </section>
       </main>

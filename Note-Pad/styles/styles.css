@@ -57,7 +57,7 @@ nav ul li {
 #display-note ul {
    display: flex;
    justify-content: center;
-   text-align: center;
+   text-align: left;
    flex-direction: column;
    width: 60%;
    margin: 0 auto;
@@ -67,10 +67,23 @@ nav ul li {
 #display-note ul li {
    display: flex;
    flex-direction: row;
-   justify-content: center;
+   justify-content: space-around;
    width: 100%;
    margin: 0;
    padding: 0;
    border: 1px solid black;
    box-sizing: border-box;
+}
+#display-note form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 1rem;
+}
+
+#display-checkbox {
+   content: " "; /* Add a space for content */
+   width: 2.7rem;
+   height: 2.7rem;
+   padding-top: 30px;
 }

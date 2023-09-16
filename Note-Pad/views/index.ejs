@@ -49,32 +49,18 @@
          </section>
          <section id="display-note">
             <ul>
+               <% let checkBoxNumber = 0 %> <% if(noteStored.length != 0) {%> <% for(let item of noteStored) {
+               checkBoxNumber++ %>
                <li>
                   <form action="/notes" method="post">
-                     <input type="checkbox" class="display-checkbox" />
+                     <input type="checkbox" class="display-checkbox" value="<% checkBoxNumber %>" />
                   </form>
                   <article class="display-card">
-                     <h2>Doing something here</h2>
-                     <h3>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed non sit deleniti quos
-                        ab, modi provident est vel dolor debitis eligendi, nostrum voluptatem velit quam
-                        dolore accusantium officiis facere saepe?
-                     </h3>
+                     <h2><%= item.title %></h2>
+                     <h3><%= item.description %></h3>
                   </article>
                </li>
-               <li>
-                  <form action="">
-                     <input type="checkbox" class="display-checkbox" />
-                  </form>
-                  <article class="display-card">
-                     <h2>Doing something here</h2>
-                     <h3>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed non sit deleniti quos
-                        ab, modi provident est vel dolor debitis eligendi, nostrum voluptatem velit quam
-                        dolore accusantium officiis facere saepe?
-                     </h3>
-                  </article>
-               </li>
+               <% } %> <% } %>
             </ul>
          </section>
       </main>

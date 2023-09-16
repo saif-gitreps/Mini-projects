@@ -1,14 +1,12 @@
 body {
    font-family: "Poppins", sans-serif;
-   background-color: rgb(250, 183, 159);
+   font-size: 1.5rem;
+   background-color: rgb(255, 200, 180);
    margin: 0;
    padding: 0;
 }
 li {
    list-style: none;
-}
-nav {
-   border: 0.5px solid black;
 }
 nav ul {
    display: flex;
@@ -16,7 +14,17 @@ nav ul {
    width: 95%;
 }
 nav ul li {
-   margin: 0 1rem;
+   margin: 0 0.5rem;
+   padding: 0.5rem;
+   border-radius: 5px;
+   color: rgb(135, 29, 29);
+}
+nav ul li h3 {
+   margin: 0;
+}
+nav ul li:hover {
+   color: rgb(183, 37, 37);
+   cursor: pointer;
 }
 #adding-note {
    display: flex;
@@ -32,24 +40,46 @@ nav ul li {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   border: 1px solid black;
+   box-shadow: 0px 0.8px 3px 0px rgb(109, 52, 52);
+   border-radius: 6px;
 }
 #adding-title {
+   color: rgb(135, 29, 29);
+   font-size: 2.3rem;
    display: inline-block;
-   /* width: 50rem; */
    width: 80%;
    box-sizing: border-box;
-   padding: 1rem;
-   margin: 1rem;
+   margin: 2rem 1rem 0.5rem 1rem;
+   padding: 0.4rem;
+   background-color: transparent;
+   border: none;
+}
+#adding-title:focus {
+   border: none;
+}
+#adding-title:active {
+   border: none;
 }
 #adding-textarea {
+   color: rgb(135, 29, 29);
+   font-size: 1.5rem;
    width: 80%;
-   /* width: 50rem; */
    box-sizing: border-box;
-   padding: 1rem;
-   margin: 1rem;
-   resize: none;
+   margin: 0.5rem 1rem 2rem 1rem;
+   padding: 0.4rem;
+   resize: vertical;
+   background-color: transparent;
+   border: none;
 }
+
+#adding-textarea:focus {
+   border: 3px solid blue;
+}
+
+#adding-textarea:active {
+   border: 3px solid blue;
+}
+
 #add-button {
    text-align: right;
 }

@@ -35,7 +35,7 @@ nav ul li:hover {
    margin: 0 auto;
    padding: 10px;
 }
-#adding-note form {
+#adding-note div {
    width: 100%;
    margin: 0;
    padding: 0;
@@ -79,9 +79,19 @@ nav ul li:hover {
 #adding-textarea:active {
    border: 3px solid blue;
 }
-
 #add-button {
+   color: rgb(109, 52, 52);
+   width: 7rem;
+   font-size: 2rem;
+   font-family: inherit;
+   font-weight: bold;
    text-align: right;
+   background-color: transparent;
+   border: none;
+}
+#add-button:hover {
+   cursor: pointer;
+   color: rgb(183, 37, 37);
 }
 
 #display-note ul {

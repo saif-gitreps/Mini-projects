@@ -32,15 +32,15 @@
       <main>
          <section id="section1">
             <article>
-               <form id="adding-note" action="">
+               <form id="adding-note" action="/note" method="post">
                   <div>
-                     <input type="text" placeholder="title.." id="adding-title" />
+                     <input type="text" placeholder="title.." id="adding-title" name="title" />
                      <textarea
-                        name=""
                         id="adding-textarea"
                         cols="100"
                         rows="5"
                         placeholder="description.."
+                        name="description"
                      ></textarea>
                   </div>
                   <button id="add-button">+ Add</button>
@@ -50,7 +50,7 @@
          <section id="display-note">
             <ul>
                <li>
-                  <form action="notes" method="post">
+                  <form action="/notes" method="post">
                      <input type="checkbox" class="display-checkbox" />
                   </form>
                   <article class="display-card">

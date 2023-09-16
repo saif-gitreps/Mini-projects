@@ -3,14 +3,14 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/Note-Pad/styles/styles.css" />
+      <link rel="stylesheet" href="/Note-Pad/public/styles/styles.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fira+Sans&family=Noto+Sans:wght@300&family=Open+Sans:wght@400;700&family=Oswald:wght@700&family=Pacifico&family=Poppins&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap"
          rel="stylesheet"
       />
-      <script src="/Note-Pad/app/config.js" defer></script>
+      <script src="/Note-Pad/public/app/config.js" defer></script>
       <title>Note app</title>
    </head>
    <body>
@@ -52,7 +52,7 @@
                <% let checkBoxNumber = 0 %> <% if(noteStored.length != 0) {%> <% for(let item of noteStored) {
                checkBoxNumber++ %>
                <li>
-                  <form action="/notes" method="post">
+                  <form action="/checkBoxData" method="post">
                      <input type="checkbox" class="display-checkbox" value="<% checkBoxNumber %>" />
                   </form>
                   <article class="display-card">

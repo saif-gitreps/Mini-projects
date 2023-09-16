@@ -7,6 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.set(express.static("public"));
 
 app.get("/home", (request, response) => {
    const filePath = path.join(__dirname, "note-data", "data.json");

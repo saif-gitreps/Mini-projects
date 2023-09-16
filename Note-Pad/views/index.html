@@ -10,6 +10,7 @@
          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fira+Sans&family=Noto+Sans:wght@300&family=Open+Sans:wght@400;700&family=Oswald:wght@700&family=Pacifico&family=Poppins&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap"
          rel="stylesheet"
       />
+      <script src="/Note-Pad/app/config.js" defer></script>
       <title>Note app</title>
    </head>
    <body>
@@ -33,13 +34,13 @@
             <article>
                <form id="adding-note" action="">
                   <div>
-                     <input type="text" placeholder="title" id="adding-title" />
+                     <input type="text" placeholder="title.." id="adding-title" />
                      <textarea
                         name=""
                         id="adding-textarea"
                         cols="100"
                         rows="5"
-                        placeholder="description"
+                        placeholder="description.."
                      ></textarea>
                   </div>
                   <button id="add-button">+ Add</button>
@@ -48,6 +49,19 @@
          </section>
          <section id="display-note">
             <ul>
+               <li>
+                  <form action="">
+                     <input type="checkbox" class="display-checkbox" />
+                  </form>
+                  <article class="display-card">
+                     <h2>Doing something here</h2>
+                     <h3>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed non sit deleniti quos
+                        ab, modi provident est vel dolor debitis eligendi, nostrum voluptatem velit quam
+                        dolore accusantium officiis facere saepe?
+                     </h3>
+                  </article>
+               </li>
                <li>
                   <form action="">
                      <input type="checkbox" class="display-checkbox" />

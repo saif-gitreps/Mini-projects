@@ -1,14 +1,18 @@
+//importing files
 const fs = require("fs");
 const express = require("express");
 const path = require("path");
-
 const app = express();
-app.use(express.urlencoded({ extended: false }));
 
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+//initiating middleware functions.
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
+//enabling templating engines.
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+//Home page request handling.
 app.get("/home", (request, response) => {
    const filePath = path.join(__dirname, "note-data", "data.json");
    const fileData = fs.readFileSync(filePath);
@@ -16,6 +20,7 @@ app.get("/home", (request, response) => {
    response.render("index", { noteStored: existingData });
 });
 
+//Deletion of Notes handling.
 app.post("/deleting", (request, response) => {
    const requestData = request.body.indexNumber;
    console.log(typeof requestData);
@@ -47,6 +52,7 @@ app.post("/deleting", (request, response) => {
    response.redirect("/home");
 });
 
+//Storage/Addition of notes handling.
 app.post("/note", (request, response) => {
    const requestData = request.body;
 
@@ -59,4 +65,7 @@ app.post("/note", (request, response) => {
    response.redirect("/home");
 });
 
-app.listen(3000);
+//initiating local server.
+app.listen(3000, () => {
+   console.log("note-pad server initiating");
+});

@@ -24,6 +24,19 @@ selectButton.addEventListener("click", () => {
       for (let item of checkBox) {
          item.style.display = "block";
       }
+      for (let item of checkBox) {
+         if (item.checked == true) {
+            item.checked = false;
+         }
+      }
    }
    toggleCounter++;
+});
+
+selectAllButton.addEventListener("click", () => {
+   for (let item of checkBox) {
+      if (item.checked != true) {
+         item.checked = true;
+      }
+   }
 });

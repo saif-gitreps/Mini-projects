@@ -109,7 +109,7 @@ nav ul li:hover {
 #display-note ul li {
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: left;
    width: 100%;
    padding: 1rem 0;
    margin-bottom: 1rem;
@@ -122,24 +122,16 @@ nav ul li:hover {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   width: 10rem;
+   width: 2.6rem;
    margin: 1rem;
 }
 
-.display-checkbox::before {
-   display: block;
+.display-checkbox {
+   display: none;
    content: " ";
    width: 2.2rem;
    height: 2.2rem;
    border: 3px solid #333;
    background-color: rgb(183, 37, 37);
    border-radius: 8px;
-}
-
-.display-checkbox:checked::before {
-   font-size: 1.9rem;
-   text-align: center;
-   content: "O";
-   background-color: rgb(109, 52, 52);
-   color: wheat;
 }

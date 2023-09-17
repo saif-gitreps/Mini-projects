@@ -17,14 +17,14 @@
       <header>
          <nav>
             <ul>
-               <li>
+               <li id="cancel-li">
+                  <h3 id="cancel-button">Cancel</h3>
+               </li>
+               <li id="select-li">
                   <h3 id="select-button">Select</h3>
                </li>
-               <li>
+               <li id="select-all-li">
                   <h3 id="select-all-button">Select All</h3>
-               </li>
-               <li id="delete-button">
-                  <h3>Delete</h3>
                </li>
             </ul>
          </nav>
@@ -34,7 +34,7 @@
             <article>
                <form id="adding-note" action="/note" method="post">
                   <div>
-                     <input type="text" placeholder="title.." id="adding-title" name="title" />
+                     <input type="text" placeholder="title.." id="adding-title" name="title" required />
                      <textarea
                         id="adding-textarea"
                         cols="100"
@@ -49,20 +49,28 @@
             </article>
          </section>
          <section id="display-note">
-            <ul>
-               <% let checkBoxNumber = 0 %> <% if(noteStored.length != 0) {%> <% for(let item of noteStored) {
-               checkBoxNumber++ %>
-               <li>
-                  <form action="/checkBoxData" method="post">
-                     <input type="checkbox" class="display-checkbox" value="<% checkBoxNumber %>" />
-                  </form>
-                  <article class="display-card">
-                     <h2><%= item.title %></h2>
-                     <h3><%= item.description %></h3>
-                  </article>
-               </li>
-               <% } %> <% } %>
-            </ul>
+            <form action="/deleting" method="post">
+               <ul>
+                  <% let checkBoxNumber = 0 %> <% if(noteStored.length != 0) {%> <% for(let item of
+                  noteStored) { checkBoxNumber++ %>
+                  <li>
+                     <div>
+                        <input
+                           type="checkbox"
+                           class="display-checkbox"
+                           value="<%=item.title%>"
+                           name="indexNumber"
+                        />
+                     </div>
+                     <article class="display-card">
+                        <h2><%= item.title %></h2>
+                        <h3><%= item.description %></h3>
+                     </article>
+                  </li>
+                  <% } %> <% } %>
+               </ul>
+               <button type="submit">delete the card</button>
+            </form>
          </section>
       </main>
    </body>

@@ -1,5 +1,3 @@
-const listItemsArray = document.querySelectorAll("display-note ul li");
-const navbar = document.querySelector("nav");
 const cancelButton = document.getElementById("cancel-li");
 const selectButton = document.getElementById("select-li");
 const selectAllButton = document.getElementById("select-all-li");

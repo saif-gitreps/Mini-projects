@@ -51,8 +51,7 @@
          <section id="display-note">
             <form action="/deleting" method="post">
                <ul>
-                  <% let checkBoxNumber = 0 %> <% if(noteStored.length != 0) {%> <% for(let item of
-                  noteStored) { checkBoxNumber++ %>
+                  <% if(noteStored.length != 0) {%> <% for(let item of noteStored) { %>
                   <li>
                      <div>
                         <input
